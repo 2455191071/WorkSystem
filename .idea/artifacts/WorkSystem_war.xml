@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="WorkSystem:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>WorkSystem</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="worksystem-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="WorkSystem:war exploded" />
+    </root>
+  </artifact>
+</component>
