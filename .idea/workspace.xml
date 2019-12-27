@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fcc745c-7b15-4a9b-b6a9-707c703e397e" name="Default Changelist" comment="" />
+    <list default="true" id="0fcc745c-7b15-4a9b-b6a9-707c703e397e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bdqn/WorksystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bdqn/WorksystemApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,14 +24,49 @@
     </option>
   </component>
   <component name="ProjectId" id="1VWTeQ144bjfVED6MEB9THJvcIc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WorkSystem\src\main\resources" />
+      <recent name="D:\WorkSystem\src\main\java\com\bdqn" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.WorksystemApplication (1)">
+    <configuration name="WorksystemApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="WorkSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bdqn.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bdqn.WorksystemApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WorksystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="WorkSystem" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.bdqn.worksystem.WorksystemApplication" />
@@ -35,6 +74,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.WorksystemApplication (1)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -58,25 +102,86 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1577367946117</updated>
-      <workItem from="1577367955174" duration="1000" />
+      <workItem from="1577367955174" duration="974000" />
+      <workItem from="1577404906133" duration="3713000" />
     </task>
+    <task id="LOCAL-00001" summary="2019-12-26">
+      <created>1577368221499</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577368221499</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2019-12-26" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019-12-26" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="167" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577368089479">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="167" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1577368089479" />
+    <state x="264" y="15" key="CommitChangelistDialog2" timestamp="1577368218218">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="264" y="15" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1577368218218" />
     <state x="549" y="175" key="FileChooserDialogImpl" timestamp="1577368156464">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="175" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1577368156464" />
-    <state x="461" y="245" key="com.intellij.ide.util.TipDialog" timestamp="1577367955474">
+    <state x="631" y="313" key="Github.ShareDialog" timestamp="1577368256210">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="461" y="245" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1577367955474" />
+    <state x="631" y="313" key="Github.ShareDialog/0.0.1536.834@0.0.1536.834" timestamp="1577368256210" />
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1577410122877">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1577410122877" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1577410122877">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1577410122877" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1577410122877">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1577410122877" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1577410122877">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1577410122877" />
+    <state width="1493" height="213" key="GridCell.Tab.1.bottom" timestamp="1577410122877">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1577410122877" />
+    <state width="1493" height="213" key="GridCell.Tab.1.center" timestamp="1577410122877">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1577410122877" />
+    <state width="1493" height="213" key="GridCell.Tab.1.left" timestamp="1577410122877">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1577410122877" />
+    <state width="1493" height="213" key="GridCell.Tab.1.right" timestamp="1577410122877">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1577410122877" />
+    <state x="272" y="62" key="SettingsEditor" timestamp="1577409386318">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="272" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1577409386318" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1577368224433">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1577368224433" />
+    <state x="461" y="245" key="com.intellij.ide.util.TipDialog" timestamp="1577404907638">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="461" y="245" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1577404907638" />
   </component>
 </project>
