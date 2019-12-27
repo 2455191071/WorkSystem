@@ -36,7 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java作业/llluu" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -101,7 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1577367946117</updated>
       <workItem from="1577367955174" duration="974000" />
-      <workItem from="1577404906133" duration="4036000" />
+      <workItem from="1577404906133" duration="5636000" />
     </task>
     <task id="LOCAL-00001" summary="2019-12-26">
       <created>1577368221499</created>
@@ -117,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577410237353</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2019-12-27">
+      <created>1577410488471</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1577410488471</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,14 +140,14 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="167" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1577368089479" />
-    <state x="264" y="15" key="CommitChangelistDialog2" timestamp="1577410439272">
+    <state x="264" y="15" key="CommitChangelistDialog2" timestamp="1577410487463">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="264" y="15" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1577410439272" />
-    <state x="549" y="175" key="FileChooserDialogImpl" timestamp="1577368156464">
+    <state x="264" y="15" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1577410487463" />
+    <state x="549" y="175" key="FileChooserDialogImpl" timestamp="1577410762817">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="549" y="175" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1577368156464" />
+    <state x="549" y="175" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1577410762817" />
     <state x="631" y="313" key="Github.ShareDialog" timestamp="1577368256210">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -181,10 +188,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="272" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1577409386318" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1577368224433">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1577410495996">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1577368224433" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1577410495996" />
     <state x="461" y="245" key="com.intellij.ide.util.TipDialog" timestamp="1577404907638">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
