@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 映射文件与持久化接口通过namespace属性进行关联，-->
+<mapper namespace="com.bdqn.Dao.ChvmotorDao">
+	<insert id="add" parameterType="Chvmotor">
+		insert into Chvmotor value(0,#{motername},#{modelno},#{modedate},#{cap})
+	</insert>
+	<update id="update" parameterType="Chvmotor">
+		update Chvmotor set motername=#{motername},modelno=#{modelno},modedate=#{modedate},cap=#{cap} where equipid = #{equipid}
+	</update>
+	<delete id="delete">
+		delete from Chvmotor where equipid=#{equipid}
+	</delete>
+	<select id="selectById" resultType="Chvmotor">
+		select * from Chvmotor where equipid=#{equipid}
+	</select>
+	
+	<select id="selectAll"  resultType="Chvmotor" parameterType="string">
+		select * from Chvmotor
+		<where>
+			<if test="motername != null and motername != '' ">
+				 motername like CONCAT('%',#{motername},'%')
+			</if>
+		</where>
+
+	</select>
+	<select id="findNameCount"  resultType="int">
+		select count(1) 
+		from Chvmotor 
+		WHERE 1=1
+		<if test="motername != null and motername != '' ">
+			and motername like CONCAT('%',#{motername},'%')
+		</if>	
+	</select>
+	<select id="selectByName" resultType="Chvmotor">
+		select * from Chvmotor 
+		<where>
+			<if test="motername!='' and motername!=null">
+				and motername like CONCAT('%',#{motername},'%')
+			</if>
+		</where> 
+	</select>
+
+	<select id="getInfoByName" parameterType="map" resultType="Chvmotor">
+	SELECT * FROM chvmotor
+	<where>
+		<if test="motername!=null and motername!=''">
+			motername like CONCAT('%',#{motername},'%')
+		</if>
+	</where>
+	</select>
+</mapper>
