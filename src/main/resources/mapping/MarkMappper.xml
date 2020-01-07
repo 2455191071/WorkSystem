@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdqn.dao.MarkMappper">
+    <insert id="addMark" parameterType="Mark">
+        INSERT INTO mark (`mid`, `stuid`, `stuclass`, `mark`, `markdate`, `isflag`, `remark`, `pnum`)
+        VALUES (#{mid}, #{stuid}, #{stuclass}, #{mark}, #{markdate}, #{isflag}, #{remark}, #{pnum});
+    </insert>
+
+    <update id="updMark" parameterType="Mark">
+		UPDATE mark
+        <trim prefix="set" suffixOverrides="," suffix="WHERE (`mid`=#{mid});">
+            <if test="stuid!=null">`stuid`=#{stuid},</if>
+            <if test="stuclass!=null">`stuclass`=#{stuclass},</if>
+            <if test="mark!=null">`mark`=#{mark},</if>
+            <if test="markdate!=null">`markdate`=#{markdate},</if>
+            <if test="isflag!=null">`isflag`=#{isflag},</if>
+            <if test="remark!=null">`remark`=#{remark},</if>
+            <if test="pnum!=null">`pnum`=#{pnum},</if>
+        </trim>
+
+	</update>
+    <delete id="delMark" parameterType="Integer">
+        delete
+        from Mark
+        where mid = #{mid}
+    </delete>
+    <select id="findMarkCount" resultType="int">
+        select COUNT(1) from mark m ,student s,stuclass st
+        <where>
+            m.stuid=s.stuid and m.stuclass=st.classid
+            <if test="pnum!=null">
+                and m.pnum= #{pnum}
+            </if>
+            <if test="markDateStart!=null">
+                and m.markdate between #{markDateStart} and #{markDateEnd}
+            </if>
+            <if test="stuclass!=null">
+                and m.stuclass=#{stuclass}
+            </if>
+            <if test="isflag!=null">
+                and m.isflag=#{isflag}
+            </if>
+        </where>
+    </select>
+    <select id="findMark" resultType="Mark">
+        select m.*,s.*,st.*,s.parphone as parphone from mark m ,student s,stuclass st
+            <where>
+                m.stuid=s.stuid and m.stuclass=st.classid
+                <if test="pnum!=null">
+                    and m.pnum = #{pnum}
+                </if>
+                <if test="markDateStart!=null">
+                    and m.markdate between #{markDateStart} and #{markDateEnd}
+                </if>
+                <if test="stuclass!=null">
+                    and m.stuclass= #{stuclass}
+                </if>
+                <if test="isflag!=null">
+                    and m.isflag= #{isflag}
+                </if>
+            </where>
+        limit #{pageStart},#{pageSize}
+    </select>
+    <select id="findMark1" resultType="Mark">
+        select m.*,s.*,st.*,s.parphone as parphone from mark m ,student s,stuclass st
+        where m.stuid=s.stuid and m.stuclass=st.classid and m.stuid=#{stuid} order by m.markdate desc
+    </select>
+    <select id="findMarkById" parameterType="Integer" resultType="Mark">
+	    select * from mark where mid=#{mid}
+	</select>
+    <select id="findStudentByStuId" resultType="Student">
+        select * from student where
+                stuid =#{stuid}
+                and stuclass=#{stuclass}
+    </select>
+</mapper>

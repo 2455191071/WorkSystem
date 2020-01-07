@@ -1,0 +1,529 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <title>登录界面</title>
+<link href="../../css/default.css" rel="stylesheet" type="text/css" />
+    <!--必要样式-->
+    <link href="../../css/styles.css" rel="stylesheet" type="text/css" />
+ <link href="../../css/demo.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/loaders.css" rel="stylesheet" type="text/css" />
+
+
+    <style>
+        /* I believe I can... */
+
+        @keyframes fly {
+            0% {
+                transform: perspective(1000px) rotateY(270deg) translateX(-50vh) translateY(-50%) translateZ(50vw);
+            }
+            75% {
+                transform: perspective(1000px) rotateY(-810deg) translateX(50vh) translateY(50%) translateZ(0);
+            }
+        }
+        @keyframes sunshine {
+            0%, 75% {
+                top: -30vh;
+                transform: scale(0);
+            }
+        }
+        @keyframes wind {
+            25% {
+                opacity: .8;
+                transform: rotateY(90deg) translateX(1000vh);
+            }
+            100% {
+                opacity: .8;
+                transform: rotateY(90deg) translateX(-100vh);
+            }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+        }
+        html,
+        body {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: skyblue;
+            z-index: -2;
+        }
+        .container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 50vh;
+            height: 50vh;
+            transform: rotateY(-90deg);
+            transform-style: preserve-3d;
+            transition: .5s;
+            z-index: -1;
+            animation: fly 8s ease-out;
+        }
+        .sun {
+            position: absolute;
+            top: -15vh;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 30vh;
+            max-width: 30vw;
+            height: 30vh;
+            max-height: 30vw;
+            border-radius: 50%;
+            background: lightgoldenrodyellow;
+            box-shadow: inset 0 0 10vw 5vw white, 0 0 15vw 10vw white;
+            filter: blur(20px);
+            /* For Firefox */
+
+            transition: .5s;
+            animation: sunshine 8s ease-out;
+            z-index: -2;
+        }
+        svg {
+            position: absolute;
+            left: 0;
+            z-index: 2;
+        }
+        .ltop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 50%;
+        }
+        .ltop:hover ~ .container {
+            transform: perspective(1000px) rotateY(-135deg) translateY(-20vh) translateZ(50vh);
+            transition: 1s;
+        }
+        .ltop:hover ~ .sun {
+            top: 90vh;
+            right: -100%;
+            transition: 1s;
+        }
+        .ltop:hover ~ .wind {
+            transform: perspective(800px) rotateX(-15deg) rotateY(-45deg);
+            transform-origin: left;
+            transition: 1s;
+        }
+        .lbot {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 50%;
+        }
+        .lbot:hover ~ .container {
+            transform: perspective(1000px) rotateY(-135deg) translateY(50vh) translateZ(50vh);
+            transition: 1s;
+        }
+        .lbot:hover ~ .sun {
+            top: -15vh;
+            right: -100%;
+            transition: 1s;
+        }
+        .lbot:hover ~ .wind {
+            transform: perspective(800px) rotateX(10deg) rotateY(-45deg);
+            transform-origin: left;
+            transition: 1s;
+        }
+        .rtop {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 50%;
+        }
+        .rtop:hover ~ .container {
+            transform: perspective(1000px) rotateY(-45deg) translateY(-20vh) translateZ(-50vh);
+            transition: 1s;
+        }
+        .rtop:hover ~ .sun {
+            top: 90vh;
+            left: -100%;
+            transition: 1s;
+        }
+        .rtop:hover ~ .wind {
+            transform: perspective(800px) rotateX(-15deg) rotateY(45deg);
+            transform-origin: right;
+            transition: 1s;
+        }
+        .rbot {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            height: 50%;
+        }
+        .rbot:hover ~ .container {
+            transform: perspective(1000px) rotateY(-45deg) translateY(50vh) translateZ(-50vh);
+            transition: 1s;
+        }
+        .rbot:hover ~ .sun {
+            left: -100%;
+            transition: 1s;
+        }
+        .rbot:hover ~ .wind {
+            transform: perspective(800px) rotateX(10deg) rotateY(45deg);
+            transform-origin: right;
+            transition: 1s;
+        }
+        #lside {
+            border-top: 25vh solid transparent;
+            border-right: 50vh solid #ececec;
+            transform: rotate(-5deg) rotateY(0deg) rotateX(-10deg);
+            transform-origin: bottom;
+        }
+        #rside {
+            margin-top: -25vh;
+            border-top: 25vh solid transparent;
+            border-right: 50vh solid #ececec;
+            transform: rotate(-5deg) rotateY(0deg) rotateX(10deg);
+            transform-origin: bottom;
+        }
+        #lwing {
+            margin-top: -25vh;
+            border-bottom: 25vh solid #f5f5f5;
+            border-right: 30vh solid transparent;
+            border-left: 50vh solid transparent;
+            transform: rotate(-22deg) rotateX(55deg) rotateY(-10deg) rotateZ(25deg);
+            transform-origin: top;
+        }
+        #rwing {
+            margin-top: -25vh;
+            border-bottom: 25vh solid #f5f5f5;
+            border-right: 30vh solid transparent;
+            border-left: 50vh solid transparent;
+            transform: rotate(-22deg) rotateX(-55deg) rotateY(10deg) rotateZ(25deg);
+            transform-origin: top;
+        }
+        .wind {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            perspective: 800px;
+            z-index: -2;
+        }
+        .wind > div {
+            position: absolute;
+            height: 5px;
+            background: linear-gradient(to right, white, transparent);
+            border-radius: 10px;
+            opacity: 0;
+        }
+        #lw1 {
+            top: 0;
+            left: 10%;
+            width: 20vh;
+            animation: wind 1.2s linear 6s infinite;
+        }
+        #lw2 {
+            top: 50%;
+            left: 0;
+            width: 50vh;
+            animation: wind .8s linear 6s infinite;
+        }
+        #lw3 {
+            top: 80%;
+            left: 0;
+            width: 40vh;
+            animation: wind 1s linear 6s infinite;
+        }
+        #rw1 {
+            top: 10%;
+            right: 0;
+            width: 30vh;
+            animation: wind 1s linear 6s infinite;
+        }
+        #rw2 {
+            top: 20%;
+            right: 0;
+            width: 40vh;
+            animation: wind 1.2s linear 6s infinite;
+        }
+        #rw3 {
+            top: 70%;
+            right: 0;
+            width: 20vh;
+            animation: wind 1.5s linear 6s infinite;
+        }
+        #rw4 {
+            top: 100%;
+            right: 20%;
+            width: 50vh;
+            animation: wind .8s linear 6s infinite;
+        }
+    </style>
+
+</head>
+<body >
+<div class="ltop"></div>
+<div class="lbot"></div>
+<div class="rtop"></div>
+<div class="rbot"></div>
+<div class="container">
+    <div id="lside"></div>
+    <div id="rside"></div>
+    <div id="lwing"></div>
+    <div id="rwing"></div>
+</div>
+<div class="sun"></div>
+<div class="wind">
+    <div id="lw1"></div>
+    <div id="lw2"></div>
+    <div id="lw3"></div>
+    <div id="rw1"></div>
+    <div id="rw2"></div>
+    <div id="rw3"></div>
+    <div id="rw4"></div>
+</div>
+
+<div class='login'>
+    <div class='login_title'>
+        <span style="padding-left: 65px;font-size: 30px;color: #00FFFF;">用户登录</span>
+    </div>
+    <div class='login_fields'>
+        <div class='login_fields__user'>  
+            <div  class='layui-form-item'>
+                <div  class='layui-input-inline' style="opacity: 0.2; right: -60px;top: 5px;" >
+
+                    <select class="layui-input-inline"  id="role" name="role" style="height: 22px"  lay-verify="required">
+                        <option value="0" style="opacity: 0.2;">教师</option>
+                        <option value="1" style="opacity: 0.2;">学生</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class='login_fields__user'>
+            <div class='icon'>
+                <img alt="" src='../../img/user_icon_copy.png'>
+            </div>
+            <input name="login" placeholder='用户名' maxlength="16" type='text' autocomplete="off" />
+            <div class='validation'>
+                <img alt="" src='../../img/tick.png'>
+            </div>
+        </div>
+        <div class='login_fields__password'>
+            <div class='icon'>
+                <img alt="" src='../../img/lock_icon_copy.png'>
+            </div>
+            <input name="pwd" placeholder='密码' maxlength="16" type='text' autocomplete="off">
+            <div class='validation'>
+                <img alt="" src='../../img/tick.png'>
+            </div>
+        </div>
+        <div class='login_fields__password' >
+            <div class='icon'>
+                <img alt="" src='../../img/key.png'>
+            </div>
+            <input name="code" placeholder='验证码' maxlength="4" type='text'  autocomplete="off">
+            <div class='validation' style="opacity: 1; right: -5px;top: -3px;">
+                <canvas class="J_codeimg" id="myCanvas" onclick="Code();">对不起，您的浏览器不支持canvas，请下载最新版浏览器!</canvas>
+            </div>
+        </div>
+        <div style="padding-left: 75px">
+        <div class='login_fields__submit' >
+            <input type='button' value='登录'>
+        </div>
+        </div>
+    </div>
+    <div class='success' style="top:-20px">
+    </div>
+</div>
+<div class="OverWindows"></div>
+
+<link href="../../layui/css/layui.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src='../../js/stopExecutionOnTimeout.js?t=1'></script>
+<script type="text/javascript" src="../../layui/layui.js"></script>
+<script type="text/javascript" src="../../js/Particleground.js"></script>
+<script type="text/javascript" src="../../Js/Treatment.js"></script>
+<script type="text/javascript" src="../../js/jquery.mockjax.js"></script>
+<script type="text/javascript">
+
+
+
+
+    var canGetCookie = 0;//是否支持存储Cookie 0 不支持 1 支持
+    var ajaxmockjax = 1;//是否启用虚拟Ajax的请求响 0 不启用  1 启用
+    //默认账号密码
+
+    var truelogin = "";
+    var truepwd = "";
+
+    var CodeVal = 0;
+    Code();
+    function Code() {
+        if(canGetCookie == 1){
+            createCode("AdminCode");
+            var AdminCode = getCookieValue("AdminCode");
+            showCheck(AdminCode);
+        }else{
+            showCheck(createCode(""));
+        }
+    }
+    function showCheck(a) {
+        CodeVal = a;
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.clearRect(0, 0, 1000, 1000);
+        ctx.font = "80px 'Hiragino Sans GB'";
+        ctx.fillStyle = "#E8DFE8";
+        ctx.fillText(a, 0, 100);
+    }
+    $(document).keypress(function (e) {
+        // 回车键事件
+        if (e.which == 13) {
+            $('input[type="button"]').click();
+        }
+    });
+
+    $('input[name="pwd"]').focus(function () {
+        $(this).attr('type', 'password');
+    });
+    $('input[type="text"]').focus(function () {
+        $(this).prev().animate({ 'opacity': '1' }, 200);
+    });
+    $('input[type="text"],input[type="password"]').blur(function () {
+        $(this).prev().animate({ 'opacity': '.5' }, 200);
+    });
+    $('input[name="login"],input[name="pwd"]').keyup(function () {
+
+
+        if (!$(this).val() == '' && Len >= 5) {
+            $(this).next().animate({
+                'opacity': '1',
+                'right': '30'
+            }, 200);
+        } else {
+            $(this).next().animate({
+                'opacity': '0',
+                'right': '20'
+            }, 200);
+        }
+    });
+    var open = 0;
+    layui.use('layer', function () {
+        $('input[type="button"]').click(function () {
+            var login = $('input[name="login"]').val();
+            var pwd = $('input[name="pwd"]').val();
+            var code = $('input[name="code"]').val();
+            var role = $("#role option:selected").val();
+            if (login == '') {
+                ErroAlert('请输入您的账号');
+            } else if (pwd == '') {
+                ErroAlert('请输入密码');
+            } else if (code == '' || code.length != 4) {
+                ErroAlert('输入验证码');
+            } else {
+                //认证中..
+                fullscreen();
+                $('.login').addClass('test'); //倾斜特效
+                setTimeout(function () {
+                    $('.login').addClass('testtwo'); //平移特效
+                }, 300);
+                setTimeout(function () {
+                    $('.authent').show().animate({ right: -320 }, {
+                        easing: 'easeOutQuint',
+                        duration: 600,
+                        queue: false
+                    });
+                    $('.authent').animate({ opacity: 1 }, {
+                        duration: 200,
+                        queue: false
+                    }).addClass('visible');
+                }, 500);
+
+                //登录
+                var JsonData = { login: login, pwd: pwd, code: code ,role: role};
+                //此处做为ajax内部判断
+                var url = "";
+                if(JsonData.code.toUpperCase() == CodeVal.toUpperCase()){
+                    url = "../user/login";
+                }else{
+                    //url = "Ajax/LoginFalse";
+
+                    layer.msg("验证码错误请重试",{icon:2,time:2000},function(){
+
+                    });
+                }
+
+
+                AjaxPost(url, JsonData,
+                    function () {
+                        //ajax加载中
+                    },
+                    function (data) {
+                        //ajax返回
+                        //认证完成
+                        setTimeout(function () {
+                            $('.authent').show().animate({ right: 90 }, {
+                                easing: 'easeOutQuint',
+                                duration: 600,
+                                queue: false
+                            });
+                            $('.authent').animate({ opacity: 0 }, {
+                                duration: 200,
+                                queue: false
+                            }).addClass('visible');
+                            $('.login').removeClass('testtwo'); //平移特效
+                        }, 2000);
+                        setTimeout(function () {
+                            $('.authent').hide();
+                            $('.login').removeClass('test');
+                            if (data.count >0) {
+                                //登录成功
+                                $('.login div').fadeOut(100);
+                                $('.success').fadeIn(1000);
+                                $('.success').html(data.Text);
+                                //跳转操作
+                                if(data.role==0){
+                                    location.href="../user/sysMenu";
+                                }else if(data.role==1){
+                                    location.href="../user/main1";
+                                }
+                            } else {
+                                alert("账号或密码错误");
+                                location.href="../user/showLogin";
+
+
+                                // AjaxErro(data);
+                            }
+                        }, 2100);
+                    })
+            }
+        })
+    })
+    var fullscreen = function () {
+        elem = document.body;
+        if (elem.webkitRequestFullScreen) {
+            elem.webkitRequestFullScreen();
+        } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+        } else if (elem.requestFullScreen) {
+            elem.requestFullscreen();
+        } else {
+            //浏览器不支持全屏API或已被禁用
+        }
+    }
+
+</script>
+</body>
+</html>

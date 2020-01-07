@@ -1,0 +1,35 @@
+package com.bdqn.service;
+
+import com.bdqn.entity.Mark;
+import com.bdqn.entity.Student;
+
+import java.util.List;
+
+public interface MarkService {
+    List<Mark> findMarkService(Integer isflag
+            , String markDateStart
+            , String markDateEnd
+            , String pnum
+            , Integer stuclass
+            , int pageStart
+            , int pageSize
+    );
+
+    int findMarkCountService(Integer isflag
+            , String markDateStart
+            , String markDateEnd
+            , String pnum
+            , Integer stuclass
+    );
+
+    Mark findMarkByIdService(Integer mid);
+
+    int addMarkService(Mark mark);
+
+    int updMarkService(Mark mark);
+
+    int delMarkService(Integer mid);
+    Student findStudentByStuId(String stuid
+            , Integer stuclass);
+    List<Mark> findMark1(String stuid);
+}
